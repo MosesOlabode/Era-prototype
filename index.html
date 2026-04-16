@@ -714,4 +714,1903 @@
   .chip-milestone { background: rgba(212,168,83,0.15); color: var(--amber); }
   .chip-setback { background: rgba(200,100,90,0.12); color: var(--red-dim); }
   .chip-update { background: rgba(139,115,85,0.15); color: var(--accent-light); }
-  .chip-reflection { background: rgba(120,180,120,0.1); c
+  .chip-reflection { background: rgba(120,180,120,0.1); color: var(--green-dim); }
+  .chip-proof { background: rgba(255,255,255,0.06); color: var(--text-secondary); }
+
+  /* Right rail */
+  .rail-widget {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 18px;
+    margin-bottom: 16px;
+  }
+
+  .rail-widget-title {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+  }
+
+  .active-era-item {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-subtle);
+    cursor: pointer;
+    transition: opacity var(--transition);
+  }
+  .active-era-item:last-child { border-bottom: none; }
+  .active-era-item:hover { opacity: 0.75; }
+
+  .active-era-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent-light);
+    flex-shrink: 0;
+  }
+
+  .active-era-name { font-size: 13px; font-weight: 400; }
+  .active-era-count { font-size: 11px; color: var(--text-muted); }
+
+  .follow-request {
+    display: flex; align-items: center; gap: 8px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .follow-request:last-child { border-bottom: none; }
+
+  .follow-req-info { flex: 1; min-width: 0; }
+  .follow-req-name { font-size: 13px; font-weight: 500; }
+  .follow-req-sub { font-size: 11px; color: var(--text-muted); }
+
+  .follow-req-btns { display: flex; gap: 6px; }
+
+  .btn-approve {
+    font-size: 11px; font-weight: 500;
+    padding: 5px 10px; border-radius: var(--radius-sm);
+    background: var(--bg-highlight);
+    color: var(--text-primary);
+    border: none; cursor: pointer;
+    transition: background var(--transition);
+  }
+  .btn-approve:hover { background: rgba(255,255,255,0.12); }
+
+  .btn-decline {
+    font-size: 11px; font-weight: 400;
+    padding: 5px 10px; border-radius: var(--radius-sm);
+    background: none;
+    color: var(--text-muted);
+    border: 1px solid var(--border-subtle); cursor: pointer;
+    transition: color var(--transition);
+  }
+  .btn-decline:hover { color: var(--red-dim); }
+
+  /* ─── ERA DETAIL ───────────────────────────────────────── */
+  .era-detail-hero {
+    height: 320px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 32px;
+  }
+
+  .era-detail-hero-bg {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+  }
+
+  .era-hero-gradient {
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, transparent 30%, rgba(8,8,8,0.95) 100%);
+  }
+
+  .era-hero-content {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 32px 36px;
+  }
+
+  .era-hero-visibility {
+    display: inline-block;
+    font-size: 10px; font-weight: 500; letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: 100px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+  }
+
+  .era-hero-title {
+    font-family: var(--font-display);
+    font-size: 48px; font-weight: 400;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+  }
+
+  .era-hero-subtitle {
+    font-size: 16px; font-weight: 300;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .era-detail-layout { display: flex; gap: 28px; }
+  .era-detail-main { flex: 1; min-width: 0; }
+  .era-detail-side { width: 260px; flex-shrink: 0; }
+
+  .era-meta-bar {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 28px;
+    padding: 16px 20px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    flex-wrap: wrap; gap: 12px;
+  }
+
+  .era-meta-item {
+    display: flex; flex-direction: column; gap: 2px;
+  }
+
+  .era-meta-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+  .era-meta-value { font-size: 14px; font-weight: 500; }
+
+  .era-summary {
+    font-size: 15px; font-weight: 300;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .entry-composer {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 16px 18px;
+    margin-bottom: 28px;
+    cursor: text;
+    transition: border-color var(--transition);
+  }
+  .entry-composer:hover { border-color: var(--border-soft); }
+
+  .entry-composer-placeholder {
+    font-size: 14px; font-weight: 300;
+    color: var(--text-muted);
+  }
+
+  .entry-composer-actions {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-top: 12px;
+  }
+
+  .entry-type-btns { display: flex; gap: 6px; flex-wrap: wrap; }
+
+  .entry-type-btn {
+    font-size: 11px; font-weight: 400;
+    padding: 4px 12px; border-radius: 100px;
+    background: var(--bg-raised);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    cursor: pointer;
+    transition: color var(--transition), border-color var(--transition);
+  }
+  .entry-type-btn:hover { color: var(--text-secondary); border-color: var(--border-soft); }
+
+  .entries-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .entries-title {
+    font-size: 12px; font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  .entries-list { display: flex; flex-direction: column; gap: 14px; }
+
+  .entry-item {
+    display: flex; gap: 16px;
+    position: relative;
+  }
+
+  .entry-timeline-line {
+    position: absolute;
+    left: 15px; top: 32px; bottom: -14px;
+    width: 1px;
+    background: var(--border-subtle);
+  }
+  .entry-item:last-child .entry-timeline-line { display: none; }
+
+  .entry-dot {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: var(--bg-raised);
+    border: 1px solid var(--border-subtle);
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px;
+    margin-top: 2px;
+  }
+
+  .entry-body { flex: 1; min-width: 0; }
+
+  .entry-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 16px 18px;
+    cursor: pointer;
+    transition: border-color var(--transition);
+  }
+  .entry-card:hover { border-color: var(--border-soft); }
+
+  .entry-card-header {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    margin-bottom: 8px; gap: 12px;
+  }
+
+  .entry-card-title { font-size: 14px; font-weight: 500; line-height: 1.4; }
+  .entry-card-date { font-size: 11px; color: var(--text-muted); flex-shrink: 0; }
+
+  .entry-card-text {
+    font-size: 13px; font-weight: 300;
+    color: var(--text-secondary);
+    line-height: 1.65;
+  }
+
+  .entry-card-media {
+    width: 100%; height: 140px;
+    object-fit: cover;
+    border-radius: var(--radius-sm);
+    margin-top: 12px;
+  }
+
+  .entry-card-media-ph {
+    width: 100%; height: 130px;
+    border-radius: var(--radius-sm);
+    margin-top: 12px;
+    position: relative; overflow: hidden;
+  }
+
+  .entry-card-actions {
+    display: flex; gap: 14px; margin-top: 12px;
+    padding-top: 12px; border-top: 1px solid var(--border-subtle);
+  }
+
+  /* Side panel */
+  .side-panel-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 18px;
+    margin-bottom: 14px;
+  }
+
+  .side-panel-title {
+    font-size: 11px; font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 14px;
+  }
+
+  .side-stat-row {
+    display: flex; justify-content: space-between;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border-subtle);
+    font-size: 13px;
+  }
+  .side-stat-row:last-child { border-bottom: none; }
+  .side-stat-label { color: var(--text-muted); }
+  .side-stat-value { font-weight: 500; }
+
+  .milestone-item {
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .milestone-item:last-child { border-bottom: none; }
+  .milestone-text { font-size: 13px; font-weight: 400; margin-bottom: 2px; }
+  .milestone-date { font-size: 11px; color: var(--text-muted); }
+
+  /* ─── PROFILE ──────────────────────────────────────────── */
+  .profile-hero {
+    height: 200px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 0;
+  }
+
+  .profile-hero-bg {
+    width: 100%; height: 100%;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .profile-identity {
+    display: flex; align-items: flex-end; gap: 20px;
+    padding: 0 0 24px;
+    margin-top: -48px;
+    position: relative; z-index: 1;
+  }
+
+  .profile-pic {
+    width: 92px; height: 92px;
+    border-radius: 50%;
+    border: 3px solid var(--bg-void);
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .profile-pic-ph {
+    width: 92px; height: 92px;
+    border-radius: 50%;
+    border: 3px solid var(--bg-void);
+    background: var(--bg-raised);
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--font-display);
+    font-size: 32px; font-weight: 400;
+    color: var(--accent-light);
+  }
+
+  .profile-info { flex: 1; padding-bottom: 4px; }
+
+  .profile-name {
+    font-family: var(--font-display);
+    font-size: 28px; font-weight: 400;
+    margin-bottom: 2px;
+  }
+
+  .profile-handle { font-size: 14px; color: var(--text-muted); margin-bottom: 8px; }
+
+  .profile-stats {
+    display: flex; gap: 20px;
+  }
+
+  .profile-stat { font-size: 13px; }
+  .profile-stat strong { font-weight: 500; }
+  .profile-stat span { color: var(--text-muted); margin-left: 3px; }
+
+  .profile-actions { display: flex; gap: 8px; padding-bottom: 4px; }
+
+  .profile-bio {
+    font-size: 14px; font-weight: 300;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 28px;
+    max-width: 560px;
+  }
+
+  .profile-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 28px;
+  }
+
+  .profile-tab {
+    font-size: 13px; font-weight: 400;
+    color: var(--text-muted);
+    padding: 10px 18px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    background: none; border-top: none; border-left: none; border-right: none;
+    transition: color var(--transition), border-color var(--transition);
+  }
+  .profile-tab.active { color: var(--text-primary); border-bottom-color: var(--accent-light); }
+
+  .era-shelf { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 16px; }
+
+  .shelf-era-card {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    cursor: pointer;
+    transition: border-color var(--transition), transform var(--transition);
+  }
+  .shelf-era-card:hover { border-color: var(--border-soft); transform: translateY(-2px); }
+
+  .shelf-era-cover {
+    height: 130px;
+    position: relative; overflow: hidden;
+  }
+
+  .shelf-cover-ph {
+    width: 100%; height: 100%;
+    position: relative;
+  }
+
+  .shelf-cover-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(14,14,14,0.8) 0%, transparent 50%);
+  }
+
+  .shelf-era-body { padding: 14px 16px 16px; }
+
+  .shelf-era-title {
+    font-family: var(--font-display);
+    font-size: 17px; font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  .shelf-era-meta { font-size: 11px; color: var(--text-muted); margin-bottom: 8px; }
+
+  .shelf-era-desc {
+    font-size: 12px; color: var(--text-secondary);
+    font-weight: 300; line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  /* ─── CREATE ERA ───────────────────────────────────────── */
+  .create-layout { max-width: 640px; }
+
+  .create-header {
+    margin-bottom: 36px;
+  }
+
+  .create-title {
+    font-family: var(--font-display);
+    font-size: 36px; font-weight: 300;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+  }
+
+  .create-sub { font-size: 14px; color: var(--text-muted); font-weight: 300; }
+
+  .form-field { margin-bottom: 24px; }
+
+  .form-label {
+    display: block;
+    font-size: 12px; font-weight: 500;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+
+  .form-optional {
+    font-size: 10px; font-weight: 400;
+    color: var(--text-muted);
+    text-transform: none; letter-spacing: 0;
+    margin-left: 6px;
+  }
+
+  .form-input {
+    width: 100%;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    font-family: var(--font-body);
+    font-size: 14px; font-weight: 400;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color var(--transition);
+  }
+  .form-input:focus { border-color: var(--border-mid); }
+  .form-input::placeholder { color: var(--text-muted); }
+
+  .form-textarea {
+    min-height: 100px;
+    resize: vertical;
+  }
+
+  .cover-upload-area {
+    width: 100%;
+    height: 160px;
+    border: 1px dashed var(--border-soft);
+    border-radius: var(--radius-md);
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: border-color var(--transition), background var(--transition);
+    background: var(--bg-surface);
+  }
+  .cover-upload-area:hover { border-color: var(--border-mid); background: var(--bg-raised); }
+
+  .cover-upload-icon { font-size: 28px; opacity: 0.4; }
+  .cover-upload-text { font-size: 13px; color: var(--text-muted); font-weight: 300; }
+
+  .visibility-options { display: flex; flex-direction: column; gap: 10px; }
+
+  .vis-option {
+    display: flex; align-items: center; gap: 14px;
+    padding: 14px 16px;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: border-color var(--transition), background var(--transition);
+    background: var(--bg-surface);
+  }
+  .vis-option:hover { border-color: var(--border-soft); background: var(--bg-raised); }
+  .vis-option.selected { border-color: var(--accent); background: var(--bg-raised); }
+
+  .vis-option-icon {
+    width: 36px; height: 36px;
+    border-radius: var(--radius-sm);
+    background: var(--bg-highlight);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+  }
+
+  .vis-option-info { flex: 1; }
+  .vis-option-title { font-size: 14px; font-weight: 500; margin-bottom: 2px; }
+  .vis-option-desc { font-size: 12px; color: var(--text-muted); font-weight: 300; }
+
+  .vis-option-radio {
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    border: 1.5px solid var(--border-soft);
+    flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .vis-option.selected .vis-option-radio {
+    border-color: var(--accent-light);
+  }
+  .vis-option.selected .vis-option-radio::after {
+    content: '';
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent-light);
+    display: block;
+  }
+
+  .category-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  .category-chip {
+    padding: 7px 16px;
+    border: 1px solid var(--border-subtle);
+    border-radius: 100px;
+    font-size: 13px; font-weight: 400;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: border-color var(--transition), color var(--transition), background var(--transition);
+    background: var(--bg-surface);
+  }
+  .category-chip:hover { border-color: var(--border-soft); color: var(--text-primary); }
+  .category-chip.selected { border-color: var(--accent); background: var(--accent-glow); color: var(--accent-light); }
+
+  .form-footer {
+    display: flex; gap: 12px; align-items: center;
+    padding-top: 28px;
+    border-top: 1px solid var(--border-subtle);
+    margin-top: 8px;
+  }
+
+  /* ─── EXPLORE ──────────────────────────────────────────── */
+  .explore-header { margin-bottom: 28px; }
+
+  .explore-search-bar {
+    width: 100%;
+    display: flex; align-items: center; gap: 10px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 14px 18px;
+    margin-bottom: 20px;
+    font-size: 15px; color: var(--text-muted);
+    font-family: var(--font-body);
+    cursor: pointer;
+    transition: border-color var(--transition);
+  }
+  .explore-search-bar:hover { border-color: var(--border-soft); }
+
+  .explore-cats { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 36px; }
+
+  .explore-cat {
+    padding: 7px 16px;
+    border-radius: 100px;
+    border: 1px solid var(--border-subtle);
+    font-size: 12px; font-weight: 400;
+    color: var(--text-secondary);
+    cursor: pointer;
+    background: var(--bg-surface);
+    transition: all var(--transition);
+  }
+  .explore-cat:hover { border-color: var(--border-soft); color: var(--text-primary); }
+  .explore-cat.active { border-color: var(--accent); background: var(--accent-glow); color: var(--accent-light); }
+
+  .explore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+  }
+
+  /* ─── COLORS for gradient placeholders ─────────────────── */
+  .grad-amber { background: linear-gradient(135deg, #1a1200 0%, #3d2800 100%); }
+  .grad-teal { background: linear-gradient(135deg, #001a14 0%, #002d22 100%); }
+  .grad-violet { background: linear-gradient(135deg, #0d0014 0%, #1a0028 100%); }
+  .grad-slate { background: linear-gradient(135deg, #0a0e18 0%, #141c2e 100%); }
+  .grad-rose { background: linear-gradient(135deg, #1a0009 0%, #2d0016 100%); }
+  .grad-stone { background: linear-gradient(135deg, #100e0a 0%, #201c16 100%); }
+
+  /* ─── NOTIFICATIONS ────────────────────────────────────── */
+  .notif-list { display: flex; flex-direction: column; gap: 2px; max-width: 640px; }
+
+  .notif-item {
+    display: flex; align-items: center; gap: 12px;
+    padding: 14px 16px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: background var(--transition);
+  }
+  .notif-item:hover { background: var(--bg-surface); }
+  .notif-item.unread { background: var(--bg-surface); }
+
+  .notif-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--accent-light);
+    flex-shrink: 0;
+  }
+  .notif-dot.read { background: transparent; }
+
+  .notif-text { flex: 1; font-size: 14px; font-weight: 300; line-height: 1.5; }
+  .notif-text strong { font-weight: 500; }
+  .notif-time { font-size: 11px; color: var(--text-muted); flex-shrink: 0; }
+
+  .notif-btns { display: flex; gap: 6px; flex-shrink: 0; }
+
+  /* ─── AUTH VIEW ────────────────────────────────────────── */
+  #view-auth {
+    display: none;
+    background: var(--bg-void);
+    min-height: 100vh;
+    align-items: center; justify-content: center;
+  }
+  #view-auth.active { display: flex; }
+
+  .auth-card {
+    width: 100%; max-width: 400px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    padding: 40px;
+  }
+
+  .auth-wordmark {
+    font-family: var(--font-display);
+    font-size: 24px; font-weight: 500;
+    text-align: center; margin-bottom: 8px;
+  }
+  .auth-wordmark span { color: var(--accent-light); }
+
+  .auth-tagline {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: center;
+    margin-bottom: 32px;
+    letter-spacing: 0.03em;
+  }
+
+  .auth-tabs {
+    display: flex;
+    background: var(--bg-raised);
+    border-radius: var(--radius-sm);
+    padding: 3px;
+    margin-bottom: 24px;
+  }
+
+  .auth-tab {
+    flex: 1; padding: 8px;
+    text-align: center;
+    font-size: 13px; font-weight: 400;
+    color: var(--text-muted);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background var(--transition), color var(--transition);
+    background: none; border: none;
+    font-family: var(--font-body);
+  }
+  .auth-tab.active { background: var(--bg-surface); color: var(--text-primary); }
+
+  .auth-field { margin-bottom: 16px; }
+
+  .auth-label {
+    display: block; font-size: 12px; color: var(--text-muted);
+    margin-bottom: 6px; font-weight: 400;
+  }
+
+  .auth-input {
+    width: 100%;
+    background: var(--bg-raised);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 11px 14px;
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--text-primary);
+    outline: none;
+    transition: border-color var(--transition);
+  }
+  .auth-input:focus { border-color: var(--border-mid); }
+  .auth-input::placeholder { color: var(--text-muted); }
+
+  .auth-submit {
+    width: 100%;
+    padding: 13px;
+    background: var(--text-primary);
+    color: var(--bg-void);
+    border: none; border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: 14px; font-weight: 500;
+    cursor: pointer; margin-top: 8px;
+    transition: opacity var(--transition);
+  }
+  .auth-submit:hover { opacity: 0.88; }
+
+  .auth-helper {
+    text-align: center;
+    font-size: 12px; color: var(--text-muted);
+    margin-top: 20px;
+    line-height: 1.6;
+  }
+
+  /* ─── FAB ───────────────────────────────────────────────── */
+  .fab {
+    position: fixed; bottom: 32px; right: 32px; z-index: 200;
+    width: 52px; height: 52px;
+    border-radius: 50%;
+    background: var(--accent-light);
+    border: none; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px; color: var(--bg-void);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    transition: transform var(--transition), opacity var(--transition);
+    display: none;
+  }
+  .fab.visible { display: flex; }
+  .fab:hover { transform: scale(1.06); }
+
+  /* ─── TOAST ─────────────────────────────────────────────── */
+  .toast {
+    position: fixed; bottom: 32px; left: 50%; transform: translateX(-50%);
+    background: var(--bg-raised);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-md);
+    padding: 12px 20px;
+    font-size: 13px; color: var(--text-primary);
+    z-index: 1000;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 200ms ease;
+    white-space: nowrap;
+  }
+  .toast.show { opacity: 1; }
+
+  /* ─── END ERA MODAL ─────────────────────────────────────── */
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 500;
+    background: rgba(0,0,0,0.7);
+    backdrop-filter: blur(4px);
+    display: none;
+    align-items: center; justify-content: center;
+  }
+  .modal-overlay.open { display: flex; }
+
+  .modal-card {
+    background: var(--bg-raised);
+    border: 1px solid var(--border-soft);
+    border-radius: var(--radius-xl);
+    padding: 36px;
+    max-width: 420px; width: 100%;
+    margin: 20px;
+  }
+
+  .modal-title {
+    font-family: var(--font-display);
+    font-size: 26px; font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  .modal-desc {
+    font-size: 14px; font-weight: 300;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+
+  .modal-note {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    padding: 12px 14px;
+    font-family: var(--font-body); font-size: 14px;
+    color: var(--text-primary);
+    width: 100%; outline: none;
+    min-height: 80px; resize: none;
+    margin-bottom: 24px;
+  }
+  .modal-note::placeholder { color: var(--text-muted); }
+
+  .modal-actions { display: flex; gap: 10px; }
+
+  .btn-end-era {
+    flex: 1; padding: 12px;
+    background: rgba(200,100,90,0.15);
+    border: 1px solid rgba(200,100,90,0.25);
+    border-radius: var(--radius-sm);
+    color: var(--red-dim); font-family: var(--font-body);
+    font-size: 14px; font-weight: 500;
+    cursor: pointer;
+    transition: background var(--transition);
+  }
+  .btn-end-era:hover { background: rgba(200,100,90,0.22); }
+
+  .btn-cancel-modal {
+    padding: 12px 20px;
+    background: none; border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm); color: var(--text-muted);
+    font-family: var(--font-body); font-size: 14px;
+    cursor: pointer; transition: color var(--transition), border-color var(--transition);
+  }
+  .btn-cancel-modal:hover { color: var(--text-secondary); border-color: var(--border-soft); }
+
+  /* Utilities */
+  .flex { display: flex; }
+  .items-center { align-items: center; }
+  .gap-8 { gap: 8px; }
+  .gap-12 { gap: 12px; }
+  .mt-4 { margin-top: 4px; }
+  .hidden { display: none !important; }
+
+  @media (max-width: 900px) {
+    .how-grid, .visibility-grid { grid-template-columns: 1fr; }
+    .feed-right, .era-detail-side { display: none; }
+    .home-layout, .era-detail-layout { display: block; }
+    .app-rail { display: none; }
+    .app-main { padding: 20px 16px 80px; }
+    .app-topbar { padding: 12px 16px; }
+    .section { padding: 60px 20px; }
+    .hero { padding: 120px 24px 80px; }
+    .landing-nav { padding: 16px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ─── LANDING ─────────────────────────────────────── -->
+<div id="view-landing" class="view active">
+  <div class="landing-noise"></div>
+  <div class="landing-glow"></div>
+
+  <nav class="landing-nav">
+    <div class="wordmark">Ninth<span>Era</span></div>
+    <div class="landing-nav-actions">
+      <button class="btn-ghost" onclick="showAuth('signin')">Sign in</button>
+      <button class="btn-primary" onclick="showAuth('signup')">Begin your Era</button>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="hero-eyebrow">Era-based social platform</div>
+    <h1 class="hero-title">
+      Life is lived in<br><em>chapters.</em>
+    </h1>
+    <p class="hero-sub">
+      Begin an Era. Build it over time. End it when that chapter is complete. Keep the record — private, public, or somewhere between.
+    </p>
+    <div class="hero-actions">
+      <button class="btn-accent" onclick="showAuth('signup')">Start your first Era</button>
+      <button class="btn-outline" onclick="showApp()">Explore the platform</button>
+    </div>
+    <p class="hero-brand-line">Leave your trails in the sands of time.</p>
+  </div>
+
+  <!-- How it works -->
+  <div class="section">
+    <div class="section-label">How it works</div>
+    <h2 class="section-title">Not posts.<br>Chapters.</h2>
+    <p class="section-sub">Every meaningful thing you create belongs to an Era. The journey stays coherent.</p>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-num">01</div>
+        <div class="how-title">Begin an Era</div>
+        <p class="how-desc">Name your chapter. Set the visibility. Give it a cover. The Era is the container — everything else builds inside it.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">02</div>
+        <div class="how-title">Drop traces</div>
+        <p class="how-desc">Add entries as the chapter unfolds. Milestones. Setbacks. Reflections. Proof. Let the arc form naturally over time.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">03</div>
+        <div class="how-title">Close the chapter</div>
+        <p class="how-desc">When that era ends, mark it complete. The full journey — beginning, buildup, and ending — stays intact forever.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sample Eras -->
+  <div class="section" style="padding-top: 0;">
+    <div class="section-label">From the platform</div>
+    <h2 class="section-title">Journeys worth following</h2>
+    <p class="section-sub">Not posts. Not noise. Structured arcs with context, continuity, and proof.</p>
+    <div class="era-preview-grid">
+      <div class="era-card-preview" onclick="showApp('era')">
+        <div class="era-card-cover">
+          <div class="era-card-cover-img grad-amber"></div>
+          <div class="era-card-cover-overlay"></div>
+          <div class="era-card-cover-text">
+            <span class="era-badge active">Active</span>
+            <div class="era-card-title">Startup Journey</div>
+          </div>
+        </div>
+        <div class="era-card-body">
+          <div class="era-card-meta">
+            <span>Kola A.</span>
+            <span>Started Jan 2026</span>
+          </div>
+          <p class="era-card-desc">Launched my first startup. Navigating the chaos, the pivots, and the small wins along the way.</p>
+          <div class="era-card-footer">
+            <span class="era-stat">📝 24 entries</span>
+            <span class="visibility-pill">Public</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="era-card-preview" onclick="showApp()">
+        <div class="era-card-cover">
+          <div class="era-card-cover-img grad-violet"></div>
+          <div class="era-card-cover-overlay"></div>
+          <div class="era-card-cover-text">
+            <span class="era-badge ended">Ended</span>
+            <div class="era-card-title">Writing Sabbatical</div>
+          </div>
+        </div>
+        <div class="era-card-body">
+          <div class="era-card-meta">
+            <span>Ada O.</span>
+            <span>2024 · 8 months</span>
+          </div>
+          <p class="era-card-desc">Left the agency to write full-time. Six months of discipline, drift, and one finished manuscript.</p>
+          <div class="era-card-footer">
+            <span class="era-stat">📝 30 entries</span>
+            <span class="visibility-pill">Public</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="era-card-preview" onclick="showApp()">
+        <div class="era-card-cover">
+          <div class="era-card-cover-img grad-teal"></div>
+          <div class="era-card-cover-overlay"></div>
+          <div class="era-card-cover-text">
+            <span class="era-badge active">Active</span>
+            <div class="era-card-title">Relocation Era</div>
+          </div>
+        </div>
+        <div class="era-card-body">
+          <div class="era-card-meta">
+            <span>Mira S.</span>
+            <span>Started Oct 2025</span>
+          </div>
+          <p class="era-card-desc">Finding my way in a new city. The search, the move, and the long process of making somewhere feel like home.</p>
+          <div class="era-card-footer">
+            <span class="era-stat">📝 18 entries</span>
+            <span class="visibility-pill">Followers</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Privacy section -->
+  <div class="section" style="padding-top: 0;">
+    <div class="section-label">Privacy</div>
+    <h2 class="section-title">Your chapter,<br>your rules.</h2>
+    <p class="section-sub">Every Era has clear, native visibility. No algorithmic surprises.</p>
+    <div class="visibility-grid">
+      <div class="vis-card">
+        <div class="vis-icon">🔒</div>
+        <div class="vis-title">Private</div>
+        <p class="vis-desc">Only you can see this Era. Build in silence. Reveal nothing until you're ready — or ever.</p>
+      </div>
+      <div class="vis-card">
+        <div class="vis-icon">👥</div>
+        <div class="vis-title">Approved followers</div>
+        <p class="vis-desc">Visible only to people you've approved. Follow requests required. You control the audience.</p>
+      </div>
+      <div class="vis-card">
+        <div class="vis-icon">🌐</div>
+        <div class="vis-title">Public</div>
+        <p class="vis-desc">Open to anyone who finds it. Great for journeys you want the world to follow and verify.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="section" style="padding-top: 0; text-align: center;">
+    <h2 class="section-title" style="max-width: 500px; margin: 0 auto 16px;">
+      Start the chapter<br>you've been putting off.
+    </h2>
+    <p class="section-sub" style="margin: 0 auto 36px;">Your era is already happening. Give it structure.</p>
+    <button class="btn-accent" style="font-size: 15px; padding: 15px 40px;" onclick="showAuth('signup')">Begin your first Era</button>
+  </div>
+
+  <footer class="landing-footer">
+    <div class="landing-footer-brand">Leave your trails in the sands of time.</div>
+    <div class="landing-footer-links">
+      <a href="#">About</a>
+      <a href="#">Privacy</a>
+      <a href="#">Terms</a>
+      <a href="#">How it works</a>
+    </div>
+    <p style="font-size: 11px; color: var(--text-muted); margin-top: 20px;">© 2026 NinthEra</p>
+  </footer>
+</div>
+
+<!-- ─── AUTH ─────────────────────────────────────────── -->
+<div id="view-auth" class="view">
+  <div class="auth-card">
+    <div class="auth-wordmark">Ninth<span>Era</span></div>
+    <div class="auth-tagline">Leave your trails in the sands of time.</div>
+    <div class="auth-tabs">
+      <button class="auth-tab active" id="tab-signin" onclick="switchAuthTab('signin')">Sign in</button>
+      <button class="auth-tab" id="tab-signup" onclick="switchAuthTab('signup')">Create account</button>
+    </div>
+    <div id="auth-signin-fields">
+      <div class="auth-field">
+        <label class="auth-label">Email</label>
+        <input class="auth-input" type="email" placeholder="your@email.com">
+      </div>
+      <div class="auth-field">
+        <label class="auth-label">Password</label>
+        <input class="auth-input" type="password" placeholder="••••••••">
+      </div>
+    </div>
+    <div id="auth-signup-fields" style="display:none;">
+      <div class="auth-field">
+        <label class="auth-label">Username</label>
+        <input class="auth-input" type="text" placeholder="@yourhandle">
+      </div>
+      <div class="auth-field">
+        <label class="auth-label">Email</label>
+        <input class="auth-input" type="email" placeholder="your@email.com">
+      </div>
+      <div class="auth-field">
+        <label class="auth-label">Password</label>
+        <input class="auth-input" type="password" placeholder="At least 8 characters">
+      </div>
+    </div>
+    <button class="auth-submit" id="auth-submit-btn" onclick="showApp()">Sign in</button>
+    <p class="auth-helper">
+      <a href="#" onclick="showLanding(); return false;" style="color: var(--text-muted); text-decoration: none;">← Back to NinthEra</a>
+    </p>
+  </div>
+</div>
+
+<!-- ─── APP ──────────────────────────────────────────── -->
+<div id="view-app" class="view">
+
+  <!-- Rail nav -->
+  <aside class="app-rail">
+    <div class="rail-header">
+      <div class="rail-wordmark" onclick="showLanding()">Ninth<span>Era</span></div>
+    </div>
+    <nav class="rail-nav">
+      <button class="rail-item active" id="nav-home" onclick="setPage('home')">
+        <span class="rail-icon">⌂</span> Home
+      </button>
+      <button class="rail-item" id="nav-explore" onclick="setPage('explore')">
+        <span class="rail-icon">⊕</span> Explore
+      </button>
+      <button class="rail-item" id="nav-notifications" onclick="setPage('notifications')">
+        <span class="rail-icon">◯</span> Notifications
+        <span style="margin-left: auto; background: var(--accent-light); color: var(--bg-void); font-size: 10px; font-weight: 600; padding: 1px 6px; border-radius: 100px;">3</span>
+      </button>
+      <div class="rail-divider"></div>
+      <div class="rail-section-label">My Eras</div>
+      <button class="rail-item" id="nav-eras" onclick="setPage('profile')">
+        <span class="rail-icon">◑</span> Founder Era
+      </button>
+      <button class="rail-item" onclick="setPage('profile')">
+        <span class="rail-icon">◑</span> Fitness Era
+      </button>
+      <button class="rail-item" onclick="setPage('create')">
+        <span class="rail-icon">+</span> New Era
+      </button>
+    </nav>
+    <div class="rail-user" onclick="setPage('profile')">
+      <div class="rail-avatar-placeholder">A</div>
+      <div>
+        <div class="rail-user-name">Ada O.</div>
+        <div class="rail-user-handle">@adaojournals</div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Content -->
+  <div class="app-content">
+    <header class="app-topbar">
+      <div class="topbar-title" id="topbar-title">Your Homestretch</div>
+      <div class="topbar-search">
+        <span style="font-size: 13px; opacity:0.5;">⌕</span>
+        Search Eras, people…
+      </div>
+      <div class="topbar-actions">
+        <button class="icon-btn" onclick="setPage('create')" title="Create Era">＋</button>
+        <button class="icon-btn" onclick="setPage('notifications')" title="Notifications">◯</button>
+        <div class="rail-avatar-placeholder" style="cursor:pointer;" onclick="setPage('profile')">A</div>
+      </div>
+    </header>
+
+    <main class="app-main">
+
+      <!-- HOME -->
+      <div class="subpage active" id="page-home">
+        <div class="home-layout">
+          <div class="feed-main">
+            <div class="feed-header">
+              <div class="feed-greeting">Your Homestretch</div>
+              <div class="feed-sub">Phases unfolding around you.</div>
+            </div>
+            <div class="feed-tabs">
+              <button class="feed-tab active">Following</button>
+              <button class="feed-tab" style="opacity:0.4; cursor:default;">For You <span style="font-size:10px; background:var(--bg-raised); padding:2px 6px; border-radius:4px; margin-left:4px; color:var(--text-muted)">soon</span></button>
+            </div>
+            <div class="feed-list">
+
+              <!-- Card 1 — Era start -->
+              <div class="feed-card" onclick="setPage('era')">
+                <div class="feed-card-header">
+                  <div class="feed-avatar-ph">K</div>
+                  <div class="feed-card-meta">
+                    <div class="feed-card-who">Kola Adeyemi</div>
+                    <div class="feed-card-action">started a new Era</div>
+                  </div>
+                  <div class="feed-card-time">2h ago</div>
+                </div>
+                <div style="padding: 2px 0 4px;">
+                  <span class="entry-chip chip-update">New Era</span>
+                </div>
+                <div class="feed-era-title">Founder Era</div>
+                <div class="feed-entry-text">Launched my first startup. Navigating the chaos, the pivots, and the small wins along the way. This chapter is live now.</div>
+                <div class="feed-card-image-placeholder grad-amber" style="height:180px; border-radius: var(--radius-md); margin-bottom: 14px; display: flex; align-items: flex-end; padding: 16px;">
+                  <span style="font-family: var(--font-display); font-size: 22px; color: rgba(255,255,255,0.7);">Founder Era</span>
+                </div>
+                <div class="feed-card-footer">
+                  <button class="feed-action-btn" onclick="event.stopPropagation(); this.classList.toggle('liked'); this.querySelector('span').textContent = this.classList.contains('liked') ? '13' : '12'">🌸 <span>12</span></button>
+                  <span class="feed-action-btn">◎ Open Era</span>
+                </div>
+              </div>
+
+              <!-- Card 2 — Entry update -->
+              <div class="feed-card" onclick="setPage('era')">
+                <div class="feed-card-header">
+                  <div class="feed-avatar-ph" style="background: #1a1200;">M</div>
+                  <div class="feed-card-meta">
+                    <div class="feed-card-who">Mira Sandoval</div>
+                    <div class="feed-card-action">updated her <strong>Relocation Era</strong></div>
+                  </div>
+                  <div class="feed-card-time">1d ago</div>
+                </div>
+                <span class="entry-chip chip-update">Update</span>
+                <div class="feed-era-title">Settling in. Unpacking chaos.</div>
+                <div class="feed-entry-text">Finally got the keys to the new place. Boxes everywhere. It doesn't feel like mine yet but I think that's just how it goes.</div>
+                <div class="feed-card-footer">
+                  <button class="feed-action-btn" onclick="event.stopPropagation(); this.classList.toggle('liked'); this.querySelector('span').textContent = this.classList.contains('liked') ? '57' : '56'">🌸 <span>56</span></button>
+                  <span class="feed-action-btn">◎ Open Era</span>
+                </div>
+              </div>
+
+              <!-- Card 3 — Milestone -->
+              <div class="feed-card" onclick="setPage('era')">
+                <div class="feed-card-header">
+                  <div class="feed-avatar-ph" style="background: #001a14;">T</div>
+                  <div class="feed-card-meta">
+                    <div class="feed-card-who">Tobi Jacob</div>
+                    <div class="feed-card-action">hit a milestone in <strong>Fitness Era</strong></div>
+                  </div>
+                  <div class="feed-card-time">3d ago</div>
+                </div>
+                <span class="entry-chip chip-milestone">Milestone</span>
+                <div class="feed-era-title">Ran my first half marathon.</div>
+                <div class="feed-entry-text">1:54:12. Eight months of 5am runs, shin splints, and missed rest days. I actually did it.</div>
+                <div class="feed-card-footer">
+                  <button class="feed-action-btn" onclick="event.stopPropagation(); this.classList.toggle('liked'); this.querySelector('span').textContent = this.classList.contains('liked') ? '119' : '118'">🌸 <span>118</span></button>
+                  <span class="feed-action-btn">◎ Open Era</span>
+                </div>
+              </div>
+
+              <!-- Card 4 — Era ended -->
+              <div class="feed-card" onclick="setPage('era')">
+                <div class="feed-card-header">
+                  <div class="feed-avatar-ph" style="background: #0d0014;">J</div>
+                  <div class="feed-card-meta">
+                    <div class="feed-card-who">Jana W.</div>
+                    <div class="feed-card-action">closed her <strong>Healing Era</strong></div>
+                  </div>
+                  <div class="feed-card-time">1w ago</div>
+                </div>
+                <span class="entry-chip chip-reflection">Era Ended</span>
+                <div class="feed-era-title">Chapter closed. Ready for what's next.</div>
+                <div class="feed-entry-text">Two years. I started this Era at the lowest point I'd ever been, and I'm ending it having rebuilt something I actually like. It's done now.</div>
+                <div class="feed-card-footer">
+                  <button class="feed-action-btn" onclick="event.stopPropagation(); this.classList.toggle('liked'); this.querySelector('span').textContent = this.classList.contains('liked') ? '244' : '243'">🌸 <span>243</span></button>
+                  <span class="feed-action-btn">◎ Open Era</span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right rail -->
+          <div class="feed-right">
+            <div class="rail-widget">
+              <div class="rail-widget-title">My Active Eras</div>
+              <div class="active-era-item" onclick="setPage('era')">
+                <div class="active-era-dot"></div>
+                <div style="flex:1">
+                  <div class="active-era-name">Founder Era</div>
+                  <div class="active-era-count">24 entries · Public</div>
+                </div>
+              </div>
+              <div class="active-era-item" onclick="setPage('era')">
+                <div class="active-era-dot"></div>
+                <div style="flex:1">
+                  <div class="active-era-name">Fitness Era</div>
+                  <div class="active-era-count">11 entries · Private</div>
+                </div>
+              </div>
+              <div style="margin-top: 14px;">
+                <button class="btn-ghost" style="width:100%; text-align:center; padding: 8px; font-size:12px;" onclick="setPage('create')">+ Begin a new Era</button>
+              </div>
+            </div>
+            <div class="rail-widget">
+              <div class="rail-widget-title">Follow Requests</div>
+              <div class="follow-request">
+                <div class="feed-avatar-ph" style="width:28px; height:28px; font-size:11px;">S</div>
+                <div class="follow-req-info">
+                  <div class="follow-req-name">Sofia M.</div>
+                  <div class="follow-req-sub">wants to follow you</div>
+                </div>
+                <div class="follow-req-btns">
+                  <button class="btn-approve" onclick="showToast('Follow request approved')">✓</button>
+                  <button class="btn-decline" onclick="showToast('Request declined')">✕</button>
+                </div>
+              </div>
+              <div class="follow-request">
+                <div class="feed-avatar-ph" style="width:28px; height:28px; font-size:11px;">R</div>
+                <div class="follow-req-info">
+                  <div class="follow-req-name">Raj P.</div>
+                  <div class="follow-req-sub">wants to follow you</div>
+                </div>
+                <div class="follow-req-btns">
+                  <button class="btn-approve" onclick="showToast('Follow request approved')">✓</button>
+                  <button class="btn-decline" onclick="showToast('Request declined')">✕</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ERA DETAIL -->
+      <div class="subpage" id="page-era">
+        <div class="era-detail-hero">
+          <div class="era-detail-hero-bg grad-amber" style="width:100%; height:100%;"></div>
+          <div class="era-hero-gradient"></div>
+          <div class="era-hero-content">
+            <div class="era-hero-visibility">🌐 Public</div>
+            <div class="era-hero-title">Founder Era</div>
+            <div class="era-hero-subtitle">Building from scratch — one impossible day at a time.</div>
+          </div>
+        </div>
+        <div class="era-detail-layout">
+          <div class="era-detail-main">
+            <div class="era-meta-bar">
+              <div class="era-meta-item">
+                <div class="era-meta-label">Owner</div>
+                <div class="era-meta-value">Kola A.</div>
+              </div>
+              <div class="era-meta-item">
+                <div class="era-meta-label">Started</div>
+                <div class="era-meta-value">Jan 2026</div>
+              </div>
+              <div class="era-meta-item">
+                <div class="era-meta-label">Status</div>
+                <div class="era-meta-value" style="color: var(--accent-light);">Active</div>
+              </div>
+              <div class="era-meta-item">
+                <div class="era-meta-label">Entries</div>
+                <div class="era-meta-value">24</div>
+              </div>
+              <div style="display:flex; gap:8px; align-items:center;">
+                <button class="btn-primary" style="font-size:12px; padding: 8px 14px;" onclick="showToast('Following Kola')">Follow</button>
+                <button class="btn-outline" style="font-size:12px; padding: 7px 14px;" onclick="showToast('Link copied')">Share</button>
+                <button class="btn-outline" style="font-size:12px; padding: 7px 14px; color: var(--red-dim); border-color: rgba(200,100,90,0.25);" onclick="openEndModal()">End Era</button>
+              </div>
+            </div>
+
+            <div class="era-summary">
+              Launched my first startup in January 2026. This Era documents the full journey — the pitch decks, the product pivots, the first users, the nights I nearly quit, and the mornings I remembered why I started. Everything goes here.
+            </div>
+
+            <div class="entry-composer" onclick="setPage('create-entry')">
+              <div class="entry-composer-placeholder">Drop a trace into this Era…</div>
+              <div class="entry-composer-actions">
+                <div class="entry-type-btns">
+                  <button class="entry-type-btn" onclick="event.stopPropagation()">Milestone</button>
+                  <button class="entry-type-btn" onclick="event.stopPropagation()">Setback</button>
+                  <button class="entry-type-btn" onclick="event.stopPropagation()">Reflection</button>
+                  <button class="entry-type-btn" onclick="event.stopPropagation()">Proof</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="entries-header">
+              <div class="entries-title">Entries · oldest first</div>
+              <button class="btn-ghost" style="font-size:12px; padding: 4px 10px;">Toggle order</button>
+            </div>
+            <div class="entries-list">
+
+              <div class="entry-item">
+                <div class="entry-timeline-line"></div>
+                <div class="entry-dot">🚀</div>
+                <div class="entry-body">
+                  <div class="entry-card">
+                    <div class="entry-card-header">
+                      <span class="entry-chip chip-update" style="margin:0;">Update</span>
+                      <span class="entry-card-date">Jan 14, 2026</span>
+                    </div>
+                    <div class="entry-card-title">Filed the company. It's real now.</div>
+                    <p class="entry-card-text">Spent three months going back and forth on the name. We filed today. It exists. There's no going back and I feel surprisingly calm about that.</p>
+                    <div class="entry-card-actions">
+                      <button class="feed-action-btn" onclick="this.classList.toggle('liked')">🌸 <span>34</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="entry-item">
+                <div class="entry-timeline-line"></div>
+                <div class="entry-dot">📊</div>
+                <div class="entry-body">
+                  <div class="entry-card">
+                    <div class="entry-card-header">
+                      <span class="entry-chip chip-milestone" style="margin:0;">Milestone</span>
+                      <span class="entry-card-date">Feb 3, 2026</span>
+                    </div>
+                    <div class="entry-card-title">Pitch deck complete, ready to fundraise.</div>
+                    <p class="entry-card-text">Took 11 versions and one harsh feedback session that made me reconsider everything. Deck is done. Starting outreach Monday.</p>
+                    <div class="entry-card-media-ph grad-stone" style="display:flex; align-items:center; justify-content:center; color: var(--text-muted); font-size: 13px;">📄 pitch_deck_v11.pdf</div>
+                    <div class="entry-card-actions">
+                      <button class="feed-action-btn" onclick="this.classList.toggle('liked')">🌸 <span>54</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="entry-item">
+                <div class="entry-timeline-line"></div>
+                <div class="entry-dot">🏢</div>
+                <div class="entry-body">
+                  <div class="entry-card">
+                    <div class="entry-card-header">
+                      <span class="entry-chip chip-update" style="margin:0;">Update</span>
+                      <span class="entry-card-date">Mar 12, 2026</span>
+                    </div>
+                    <div class="entry-card-title">First office space. Small, but ours.</div>
+                    <p class="entry-card-text">It's a single room in a shared space in Yaba. Two desks, one monitor, no AC. I've never been more excited about a room in my life.</p>
+                    <div class="entry-card-media-ph grad-slate" style="height:110px;"></div>
+                    <div class="entry-card-actions">
+                      <button class="feed-action-btn" onclick="this.classList.toggle('liked')">🌸 <span>72</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="entry-item">
+                <div class="entry-dot">🎯</div>
+                <div class="entry-body">
+                  <div class="entry-card">
+                    <div class="entry-card-header">
+                      <span class="entry-chip chip-milestone" style="margin:0;">Milestone</span>
+                      <span class="entry-card-date">Apr 8, 2026</span>
+                    </div>
+                    <div class="entry-card-title">Hit our first 1,000 users. Feeling surreal.</div>
+                    <p class="entry-card-text">We did zero paid acquisition. All word-of-mouth and two Twitter threads. 1,000 people are using something I built. I had to sit with that for a while.</p>
+                    <div class="entry-card-actions">
+                      <button class="feed-action-btn" onclick="this.classList.toggle('liked')">🌸 <span>105</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Side panel -->
+          <div class="era-detail-side">
+            <div class="side-panel-card">
+              <div class="side-panel-title">Era facts</div>
+              <div class="side-stat-row">
+                <span class="side-stat-label">Category</span>
+                <span class="side-stat-value">Building</span>
+              </div>
+              <div class="side-stat-row">
+                <span class="side-stat-label">Duration</span>
+                <span class="side-stat-value">3 months</span>
+              </div>
+              <div class="side-stat-row">
+                <span class="side-stat-label">Entries</span>
+                <span class="side-stat-value">24</span>
+              </div>
+              <div class="side-stat-row">
+                <span class="side-stat-label">Appreciations</span>
+                <span class="side-stat-value">1,204</span>
+              </div>
+              <div class="side-stat-row">
+                <span class="side-stat-label">Followers</span>
+                <span class="side-stat-value">312</span>
+              </div>
+            </div>
+            <div class="side-panel-card">
+              <div class="side-panel-title">Milestones</div>
+              <div class="milestone-item">
+                <div class="milestone-text">Company filed</div>
+                <div class="milestone-date">Jan 14, 2026</div>
+              </div>
+              <div class="milestone-item">
+                <div class="milestone-text">First office</div>
+                <div class="milestone-date">Mar 12, 2026</div>
+              </div>
+              <div class="milestone-item">
+                <div class="milestone-text">1,000 users</div>
+                <div class="milestone-date">Apr 8, 2026</div>
+              </div>
+            </div>
+            <div class="side-panel-card">
+              <div class="side-panel-title">More from Kola</div>
+              <div class="active-era-item" onclick="showToast('Opening Era')">
+                <div class="active-era-dot" style="background: var(--text-muted);"></div>
+                <div style="flex:1">
+                  <div class="active-era-name">Fitness Era</div>
+                  <div class="active-era-count">Private · 11 entries</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PROFILE -->
+      <div class="subpage" id="page-profile">
+        <div class="profile-hero">
+          <div class="profile-hero-bg grad-stone"></div>
+        </div>
+        <div class="profile-identity">
+          <div class="profile-pic-ph">A</div>
+          <div class="profile-info">
+            <div class="profile-name">Ada O.</div>
+            <div class="profile-handle">@adaojournals</div>
+            <div class="profile-stats">
+              <div class="profile-stat"><strong>12</strong><span>Eras</span></div>
+              <div class="profile-stat"><strong>580</strong><span>Followers</span></div>
+              <div class="profile-stat"><strong>214</strong><span>Following</span></div>
+            </div>
+          </div>
+          <div class="profile-actions">
+            <button class="btn-outline" style="font-size:12px; padding: 8px 16px;" onclick="setPage('create')">Edit profile</button>
+          </div>
+        </div>
+        <p class="profile-bio">Writing about the chapters that actually matter. Currently: relocating, building, and figuring it out as I go.</p>
+        <div class="profile-tabs">
+          <button class="profile-tab active">Eras</button>
+          <button class="profile-tab">About</button>
+        </div>
+        <div style="margin-bottom: 16px; display:flex; gap: 8px;">
+          <button class="explore-cat active" style="font-size:11px; padding: 5px 12px;">All</button>
+          <button class="explore-cat" style="font-size:11px; padding: 5px 12px;" onclick="toggleCat(this)">Active</button>
+          <button class="explore-cat" style="font-size:11px; padding: 5px 12px;" onclick="toggleCat(this)">Ended</button>
+        </div>
+        <div class="era-shelf">
+          <div class="shelf-era-card" onclick="setPage('era')">
+            <div class="shelf-era-cover grad-teal">
+              <div class="shelf-cover-overlay"></div>
+            </div>
+            <div class="shelf-era-body">
+              <div style="margin-bottom:6px;"><span class="era-badge active" style="margin:0;">Active</span></div>
+              <div class="shelf-era-title">Relocation Era</div>
+              <div class="shelf-era-meta">Oct 2025 · 18 entries · Followers only</div>
+              <div class="shelf-era-desc">Finding my way in a new city. The search, the move, and the long process of making somewhere feel like home.</div>
+            </div>
+          </div>
+          <div class="shelf-era-card" onclick="setPage('era')">
+            <div class="shelf-era-cover grad-violet">
+              <div class="shelf-cover-overlay"></div>
+            </div>
+            <div class="shelf-era-body">
+              <div style="margin-bottom:6px;"><span class="era-badge ended" style="margin:0;">Ended</span></div>
+              <div class="shelf-era-title">Writing Sabbatical</div>
+              <div class="shelf-era-meta">2024 · 30 entries · Public</div>
+              <div class="shelf-era-desc">Six months away from the agency. One finished manuscript. Everything in between.</div>
+            </div>
+          </div>
+          <div class="shelf-era-card" onclick="setPage('era')">
+            <div class="shelf-era-cover grad-slate">
+              <div class="shelf-cover-overlay"></div>
+            </div>
+            <div class="shelf-era-body">
+              <div style="margin-bottom:6px;"><span class="era-badge ended" style="margin:0;">Ended</span></div>
+              <div class="shelf-era-title">Tech Internship</div>
+              <div class="shelf-era-meta">2023 · 42 entries · Public</div>
+              <div class="shelf-era-desc">First real tech job. Learning more in 3 months than I had in 2 years of school.</div>
+            </div>
+          </div>
+          <div class="shelf-era-card" onclick="setPage('era')">
+            <div class="shelf-era-cover grad-rose">
+              <div class="shelf-cover-overlay"></div>
+            </div>
+            <div class="shelf-era-body">
+              <div style="margin-bottom:6px;"><span class="era-badge ended" style="margin:0;">Ended</span></div>
+              <div class="shelf-era-title">Travel Year</div>
+              <div class="shelf-era-meta">2022 · 50 entries · Public</div>
+              <div class="shelf-era-desc">A year moving between cities on a one-way ticket and no fixed plan.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CREATE ERA -->
+      <div class="subpage" id="page-create">
+        <div class="create-layout">
+          <div class="create-header">
+            <div class="create-title">Begin an Era</div>
+            <div class="create-sub">Name the chapter. Give it structure. Let it unfold.</div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Cover image <span class="form-optional">optional</span></label>
+            <div class="cover-upload-area" onclick="showToast('Image upload coming in full build')">
+              <div class="cover-upload-icon">⊕</div>
+              <div class="cover-upload-text">Add a cover image for your Era</div>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Era title</label>
+            <input class="form-input" type="text" placeholder="e.g. Founder Era, Healing Era, Relocation Era…">
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Subtitle <span class="form-optional">optional</span></label>
+            <input class="form-input" type="text" placeholder="One line about this chapter">
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Summary <span class="form-optional">optional but encouraged</span></label>
+            <textarea class="form-input form-textarea" placeholder="What is this chapter about? Why does it matter?"></textarea>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Category</label>
+            <div class="category-grid">
+              <div class="category-chip" onclick="toggleChip(this)">Building</div>
+              <div class="category-chip" onclick="toggleChip(this)">Healing</div>
+              <div class="category-chip" onclick="toggleChip(this)">Fitness</div>
+              <div class="category-chip" onclick="toggleChip(this)">Learning</div>
+              <div class="category-chip" onclick="toggleChip(this)">Career</div>
+              <div class="category-chip" onclick="toggleChip(this)">Life</div>
+              <div class="category-chip" onclick="toggleChip(this)">Relationships</div>
+              <div class="category-chip" onclick="toggleChip(this)">Travel</div>
+              <div class="category-chip" onclick="toggleChip(this)">Faith</div>
+              <div class="category-chip" onclick="toggleChip(this)">Recovery</div>
+              <div class="category-chip" onclick="toggleChip(this)">Creative</div>
+              <div class="category-chip" onclick="toggleChip(this)">Other</div>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Visibility</label>
+            <div class="visibility-options">
+              <div class="vis-option selected" onclick="selectVis(this)">
+                <div class="vis-option-icon">🔒</div>
+                <div class="vis-option-info">
+                  <div class="vis-option-title">Private</div>
+                  <div class="vis-option-desc">Only you can see this Era</div>
+                </div>
+                <div class="vis-option-radio"></div>
+              </div>
+              <div class="vis-option" onclick="selectVis(this)">
+                <div class="vis-option-icon">👥</div>
+                <div class="vis-option-info">
+                  <div class="vis-option-title">Approved followers</div>
+                  <div class="vis-option-desc">Followers you approve can follow this Era</div>
+                </div>
+                <div class="vis-option-radio"></div>
+              </div>
+              <div class="vis-option" onclick="selectVis(this)">
+                <div class="vis-option-icon">🌐</div>
+                <div class="vis-option-info">
+                  <div class="vis-option-title">Public</div>
+                  <div class="vis-option-desc">Anyone can discover and follow this Era</div>
+                </div>
+                <div class="vis-option-radio"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-label">Start date</label>
+            <input class="form-input" type="date" value="2026-04-14">
+          </div>
+
+          <div class="form-footer">
+            <button class="btn-accent" style="font-size:14px; padding: 13px 28px;" onclick="showToast('Era created — now drop your first trace.'); setPage('era')">Begin this Era</button>
+            <button class="btn-ghost" onclick="setPage('home')">Cancel</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- EXPLORE -->
+      <div class="subpage" id="page-explore">
+        <div class="explore-header">
+          <div class="section-label" style="margin-bottom:12px;">Explore</div>
+          <div class="feed-greeting">Discover Eras</div>
+          <div class="feed-sub" style="margin-bottom: 20px;">Public journeys worth following.</div>
+        </div>
+        <div class="explore-search-bar">
+          <span style="font-size:16px; opacity:0.4;">⌕</span>
+          Search Eras, categories, people…
+        </div>
+        <div class="explore-cats">
+          <div class="explore-cat active" onclick="toggleCat(this)">All</div>
+          <div class="explore-cat" onclick="toggleCat(this)">Building</div>
+          <div class="explore-cat" onclick="toggleCat(this)">Healing</div>
+          <div class="explore-cat" onclick="toggleCat(this)">Fitness</div>
+          <div class="explore-cat" onclick="toggleCat(this)">Career</div>
+          <div class="explore-cat" onclick="toggleCat(this)">Learning</div>
+          <div class="explore-cat" onclick="toggleCat(this)">Travel</div>
+          <div class="explore-cat" onclick="toggleCat(this)">Life</div>
+          <div class="explore-cat" onclick="toggleCat(this)">Recovery</div>
+        </div>
+        <div class="explore-grid">
+          <div class="era-card-preview" onclick="setPage('era')">
+            <div class="era-card-cover grad-amber" style="height:140px;"></div>
+            <div class="era-card-body">
+              <div class="era-card-meta"><span>Kola A.</span><span>Building</span></div>
+              <div class="era-card-title" style="font-size:17px;">Founder Era</div>
+              <p class="era-card-desc" style="font-size:12px;">Launched my first startup. Navigating chaos, pivots, and small wins.</p>
+              <div class="era-card-footer"><span class="era-stat">📝 24 entries</span><span class="visibility-pill">Public</span></div>
+            </div>
+          </div>
+          <div class="era-card-preview" onclick="setPage('era')">
+            <div class="era-card-cover grad-violet" style="height:140px;"></div>
+            <div class="era-card-body">
+              <div class="era-card-meta"><span>Ada O.</span><span>Creative</span></div>
+              <div class="era-card-title" style="font-size:17px;">Writing Sabbatical</div>
+              <p class="era-card-desc" style="font-size:12px;">Six months. One manuscript. The whole experiment documented.</p>
+              <div class="era-card-footer"><span class="era-stat">📝 30 entries</span><span class="visibility-pill">Public</span></div>
+            </div>
+          </div>
+          <div class="era-card-preview" onclick="setPage('era')">
+            <div class="era-card-cover grad-teal" style="height:140px;"></div>
+            <div class="era-card-body">
+              <div class="era-card-meta"><span>Mira S.</span><span>Life</span></div>
+              <div class="era-card-title" style="font-size:17px;">Relocation Era</div>
+              <p class="era-card-desc" style="font-size:12px;">Finding my way in a new city. The search, the move, the settling.</p>
+              <div class="era-card-footer"><span class="era-stat">📝 18 entries</span><span class="visibility-pill">Public</span></div>
+            </div>
+          </div>
+          <div class="era-card-preview" onclick="setPage('era')">
+            <div class="era-card-cover grad-slate" style="height:140px;"></div>
+            <div class="era-card-body">
+              <div class="era-card-meta"><span>Deji O.</span><span>Fitness</span></div>
+              <div class="era-card-title" style="font-size:17px;">Marathon Era</div>
+              <p class="era-card-desc" style="font-size:12px;">Training for my first marathon at 38. The runs, the knees, the lessons.</p>
+              <div class="era-card-footer"><span class="era-stat">📝 22 entries</span><span class="visibility-pill">Public</span></div>
+            </div>
+          </div>
+          <div class="era-card-preview" onclick="setPage('era')">
+            <div class="era-card-cover grad-rose" style="height:140px;"></div>
+            <div class="era-card-body">
+              <div class="era-card-meta"><span>N. Osei</span><span>Recovery</span></div>
+              <div class="era-card-title" style="font-size:17px;">Healing Era</div>
+              <p class="era-card-desc" style="font-size:12px;">Closed. 2 years of rebuilding. All documented, all real.</p>
+              <div class="era-card-footer"><span class="era-stat">📝 41 entries</span><span class="visibility-pill">Public</span></div>
+            </div>
+          </div>
+          <div class="era-card-preview" onclick="setPage('era')">
+            <div class="era-card-cover grad-stone" style="height:140px;"></div>
+            <div class="era-card-body">
+              <div class="era-card-meta"><span>Yemi A.</span><span>Career</span></div>
+              <div class="era-card-title" style="font-size:17px;">Career Pivot</div>
+              <p class="era-card-desc" style="font-size:12px;">Leaving law after 6 years. Building something new. No map.</p>
+              <div class="era-card-footer"><span class="era-stat">📝 15 entries</span><span class="visibility-pill">Public</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- NOTIFICATIONS -->
+      <div class="subpage" id="page-notifications">
+        <div style="margin-bottom: 28px;">
+          <div class="feed-greeting">Notifications</div>
+          <div class="feed-sub">What's happened while you were away.</div>
+        </div>
+        <div class="notif-list">
+          <div class="notif-item unread">
+            <div class="notif-dot"></div>
+            <div class="feed-avatar-ph" style="width:32px; height:32px; font-size:12px; flex-shrink:0;">S</div>
+            <div class="notif-text"><strong>Sofia M.</strong> wants to follow you.</div>
+            <div class="notif-btns">
+              <button class="btn-approve" style="font-size:12px;" onclick="showToast('Request approved'); this.closest('.notif-item').querySelector('.notif-dot').className='notif-dot read'">Approve</button>
+              <button class="btn-decline" style="font-size:12px;" onclick="this.closest('.notif-item').remove()">Decline</button>
+            </div>
+            <div class="notif-time">2h ago</div>
+          </div>
+          <div class="notif-item unread">
+            <div class="notif-dot"></div>
+            <div class="feed-avatar-ph" style="width:32px; height:32px; font-size:12px; flex-shrink:0;">R</div>
+            <div class="notif-text"><strong>Raj P.</strong> appreciated your entry in <strong>Relocation Era</strong>.</div>
+            <div class="notif-time">4h ago</div>
+          </div>
+          <div class="notif-item unread">
+            <div class="notif-dot"></div>
+            <div class="feed-avatar-ph" style="width:32px; height:32px; font-size:12px; flex-shrink:0;">K</div>
+            <div class="notif-text"><strong>Kola A.</strong> added a new entry to <strong>Founder Era</strong>.</div>
+            <div class="notif-time">1d ago</div>
+          </div>
+          <div class="notif-item">
+            <div class="notif-dot read"></div>
+            <div class="feed-avatar-ph" style="width:32px; height:32px; font-size:12px; flex-shrink:0;">T</div>
+            <div class="notif-text"><strong>Tobi J.</strong> hit a milestone in <strong>Fitness Era</strong>.</div>
+            <div class="notif-time">3d ago</div>
+          </div>
+          <div class="notif-item">
+            <div class="notif-dot read"></div>
+            <div class="feed-avatar-ph" style="width:32px; height:32px; font-size:12px; flex-shrink:0;">J</div>
+            <div class="notif-text"><strong>Jana W.</strong> closed her <strong>Healing Era</strong>.</div>
+            <div class="notif-time">1w ago</div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<!-- FAB -->
+<button class="fab" id="fab" onclick="setPage('create')">＋</button>
+
+<!-- End Era Modal -->
+<div class="modal-overlay" id="end-modal" onclick="if(event.target===this)closeEndModal()">
+  <div class="modal-card">
+    <div class="modal-title">Close this chapter.</div>
+    <p class="modal-desc">Ending an Era is a real product moment. The journey stays intact. You can still add a final edit later.</p>
+    <textarea class="modal-note" placeholder="A closing note — optional. What does this chapter mean now that it's done?"></textarea>
+    <div class="modal-actions">
+      <button class="btn-end-era" onclick="endEra()">End this Era</button>
+      <button class="btn-cancel-modal" onclick="closeEndModal()">Keep it open</button>
+    </div>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+  let currentView = 'landing';
+  let currentPage = 'home';
+
+  const pages = {
+    home: { title: 'Your Homestretch' },
+    era: { title: 'Founder Era' },
+    profile: { title: 'Ada O.' },
+    create: { title: 'Begin an Era' },
+    explore: { title: 'Explore' },
+    notifications: { title: 'Notifications' },
+  };
+
+  function showLanding() {
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    document.getElementById('view-landing').classList.add('active');
+    document.getElementById('fab').classList.remove('visible');
+    currentView = 'landing';
+  }
+
+  function showAuth(tab = 'signin') {
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    document.getElementById('view-auth').classList.add('active');
+    switchAuthTab(tab);
+    currentView = 'auth';
+  }
+
+  function showApp(page = 'home') {
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    document.getElementById('view-app').classList.add('active');
+    document.getElementById('fab').classList.add('visible');
+    currentView = 'app';
+    setPage(page);
+  }
+
+  function switchAuthTab(tab) {
+    document.getElementById('tab-signin').classList.toggle('active', tab === 'signin');
+    document.getElementById('tab-signup').classList.toggle('active', tab === 'signup');
+    document.getElementById('auth-signin-fields').style.display = tab === 'signin' ? '' : 'none';
+    document.getElementById('auth-signup-fields').style.display = tab === 'signup' ? '' : 'none';
+    document.getElementById('auth-submit-btn').textContent = tab === 'signin' ? 'Sign in' : 'Create account';
+  }
+
+  function setPage(name) {
+    currentPage = name;
+    document.querySelectorAll('.subpage').forEach(p => p.classList.remove('active'));
+    const pg = document.getElementById('page-' + name);
+    if (pg) pg.classList.add('active');
+    document.querySelectorAll('.rail-item').forEach(r => r.classList.remove('active'));
+    const navEl = document.getElementById('nav-' + name);
+    if (navEl) navEl.classList.add('active');
+    const info = pages[name] || { title: '' };
+    document.getElementById('topbar-title').textContent = info.title;
+    window.scrollTo(0, 0);
+  }
+
+  function toggleChip(el) {
+    el.classList.toggle('selected');
+  }
+
+  function toggleCat(el) {
+    const parent = el.parentElement;
+    parent.querySelectorAll('.explore-cat, .active').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+  }
+
+  function selectVis(el) {
+    el.closest('.visibility-options').querySelectorAll('.vis-option').forEach(v => v.classList.remove('selected'));
+    el.classList.add('selected');
+  }
+
+  function openEndModal() {
+    document.getElementById('end-modal').classList.add('open');
+  }
+
+  function closeEndModal() {
+    document.getElementById('end-modal').classList.remove('open');
+  }
+
+  function endEra() {
+    closeEndModal();
+    showToast('Era closed. The chapter is complete.');
+    setPage('profile');
+  }
+
+  let toastTimer;
+  function showToast(msg) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(() => t.classList.remove('show'), 2800);
+  }
+
+  // Stagger feed card entry animation
+  window.addEventListener('load', () => {
+    const cards = document.querySelectorAll('.feed-card, .era-card-preview');
+    cards.forEach((c, i) => {
+      c.style.opacity = '0';
+      c.style.transform = 'translateY(12px)';
+      c.style.transition = `opacity 300ms ease ${i * 60}ms, transform 300ms ease ${i * 60}ms, border-color 180ms ease`;
+      setTimeout(() => {
+        c.style.opacity = '1';
+        c.style.transform = 'translateY(0)';
+      }, 50);
+    });
+  });
+</script>
+</body>
+</html>
